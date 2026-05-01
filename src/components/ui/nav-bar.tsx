@@ -1,5 +1,6 @@
 import HydraLogo from "../../assets/png/hydra-logo.png";
 import Hydra from "../../assets/png/hydra.png";
+import { Button } from "./button";
 
 export function NavBar() {
   return (
@@ -15,8 +16,8 @@ export function NavBar() {
         <p>HOW TO</p>
       </nav>
       <div className="flex items-center gap-9.5">
-        <button className="border-2 border-white rounded-full text-white font-bold text-xs py-2 px-6 ">CONTACT US</button>
-        <button className=" bg-linear-to-r from-[#8176AF] to-[#C0B7E8] rounded-full font-bold text-xs py-2 px-6.5 ">Join Hydra</button>
+        <Button variant="secondary"  size="sm">CONTACT US</Button>
+        <Button variant="primary" size="md">Join Hydra</Button>
       </div>
     </div>
   );

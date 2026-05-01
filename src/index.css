@@ -5,4 +5,5 @@
 @theme { 
   --font-montserrat: "Montserrat", sans-serif;
   --breakpoint-sm: 640px;
+  --pri-purple:" bg-linear-to-r from-[#8176AF] to-[#C0B7E8]"
 }
