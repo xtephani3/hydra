@@ -10,10 +10,10 @@ export function NavBar() {
         <img alt="hydra-logo" src={Hydra} />
       </div>
       <nav className="flex items-center text-white font-bold text-xs gap-10.5">
-        <p>ABOUT</p>
-        <p>SERVICES</p>
-        <p>TECHNOLOGIES</p>
-        <p>HOW TO</p>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#technologies">TECHNOLOGIES</a>
+        <a href="#how">HOW TO</a>
       </nav>
       <div className="flex items-center gap-9.5">
         <Button variant="secondary"  size="sm">CONTACT US</Button>

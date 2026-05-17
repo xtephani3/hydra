@@ -6,9 +6,9 @@ const variants: Record<any, string> = {
 };
 
 const sizes: Record<any, string> = {
-  sm: "py-2 px-6",
-  md:"py-2 px-6.5",
-  lg:" py-2 px-7"
+  sm: "py-4 px-6.5",
+  md:"py-4 px-7",
+  lg:" py-4 px-9"
 };
 
 interface MyButtonProps {

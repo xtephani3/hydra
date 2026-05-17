@@ -1,10 +1,13 @@
 import { Button } from "../ui/button";
 import HeroMedia from "../../assets/png/hero-media.png";
 import { RiArrowRightLongLine } from "@remixicon/react";
+import { CallToActions } from "./call-to-action";
+
 
 export function HeroSection() {
   return (
-    <div className="w-full flex mt-34.5 font-montserrat">
+    <div>
+    <div className="w-full flex mt-40 font-montserrat">
       <div className="w-[60%] mt-9 flex flex-col gap-16">
         <div className="flex flex-col gap-9">
             <div>
@@ -32,6 +35,8 @@ export function HeroSection() {
       <div className="w-[40%]">
         <img alt="a girl wearing a vr glasses " src={HeroMedia} />
       </div>
+    </div>
+    <CallToActions/>
     </div>
   );
 }
