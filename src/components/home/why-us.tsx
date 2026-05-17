@@ -44,7 +44,7 @@ const WhyUsCard = ({ icon, title, description }: WhyUsCardProps) => {
   };
 
   return (
-    <div className="bg-[radial-gradient(circle_at_center,#433D60,#221F2F)] font-montserrat px-5 py-6 rounded-4xl flex flex-col justify-center items-center gap-8.5 transition duration-300 hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(0,0,0,0.25)]">
+    <div className="bg-[radial-gradient(circle_at_center,#433D60,#221F2F)] font-montserrat px-5 py-6 rounded-4xl flex flex-col justify-center items-center gap-8.5">
       <div className="rounded-full p-2.5 bg-[#221F2F]">
         <img src={icon} alt={title} />
       </div>

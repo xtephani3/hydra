@@ -3,9 +3,9 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 const variants = {
   primary:
-    "bg-linear-to-r from-[#8176AF] to-[#C0B7E8] rounded-full text-xs font-bold text-[#343045] hover:shadow-[0_0_28px_rgba(192,183,232,0.35)] hover:-translate-y-0.5",
+    "bg-linear-to-r from-[#8176AF] to-[#C0B7E8] rounded-full text-xs font-bold text-[#343045] ",
   secondary:
-    "border-2 border-white rounded-full text-white font-bold text-xs hover:bg-white hover:text-[#343045]",
+    "border-2 border-white rounded-full text-white font-bold text-xs",
 };
 
 const sizes = {
