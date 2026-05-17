@@ -10,7 +10,7 @@ import { Footer } from "../components/home/footer"
 
 export function Home(){
     return(
-        <div className='bg-[url("/hydra-bg-1.png")] bg-no-repeat bg-cover font-montserrat px-21 py-12.5'>
+        <div className='min-h-screen overflow-hidden bg-[url("/hydra-bg-1.png")] bg-no-repeat bg-cover font-montserrat px-5 py-7 sm:px-8 lg:px-21 lg:py-12.5'>
             <NavBar/>
             <HeroSection/>
             <AboutUs/>
