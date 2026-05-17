@@ -14,69 +14,69 @@ export function Footer() {
 
   return (
     <footer>
-      <div className="-mx-5 overflow-x-auto px-5 sm:-mx-8 sm:px-8 lg:mx-0 lg:overflow-visible lg:px-0">
-        <div className="flex min-w-[620px] flex-row justify-between items-center gap-7 mt-20 text-left sm:min-w-[720px] lg:mt-40 lg:min-w-0 lg:gap-0">
+      <div className="mt-20 flex flex-col gap-10 lg:mt-40 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
+        <div className="flex items-center justify-between gap-3 text-left sm:gap-6 lg:contents">
           <div className="shrink-0">
-            <img className="w-20 lg:w-auto" src={HydraLogo} alt="hydra logo" />
+            <img className="w-16 sm:w-20 lg:w-auto" src={HydraLogo} alt="hydra logo" />
           </div>
-          <img className="h-24 w-auto lg:h-auto" src={VerticalLine} />
-          <nav className="flex flex-col gap-1.5 text-xs text-white font-bold lg:gap-2 lg:text-base">
+          <img className="h-20 w-auto sm:h-24 lg:h-auto" src={VerticalLine} />
+          <nav className="flex flex-col gap-1 text-[10px] text-white font-bold sm:gap-1.5 sm:text-xs lg:gap-2 lg:text-base">
             <a className="transition hover:text-[#C0B7E8]" href="#about">ABOUT</a>
             <a className="transition hover:text-[#C0B7E8]" href="#services">SERVICES</a>
             <a className="transition hover:text-[#C0B7E8]" href="#technologies">TECHNOLOGIES</a>
             <a className="transition hover:text-[#C0B7E8]" href="#how">HOW TO</a>
           </nav>
-          <img className="h-24 w-auto lg:h-auto" src={VerticalLine} />
-          <nav className="flex flex-col gap-1.5 text-xs text-white font-bold lg:gap-2 lg:text-base">
+          <img className="h-20 w-auto sm:h-24 lg:h-auto" src={VerticalLine} />
+          <nav className="flex flex-col gap-1 text-[10px] text-white font-bold sm:gap-1.5 sm:text-xs lg:gap-2 lg:text-base">
             <a className="transition hover:text-[#C0B7E8]" href="#join">FAQ</a>
             <a className="transition hover:text-[#C0B7E8]" href="#about">SITEMAPS</a>
             <a className="transition hover:text-[#C0B7E8]" href="#join">CONDITIONS</a>
             <a className="transition hover:text-[#C0B7E8]" href="#join">LICENCES</a>
           </nav>
-          <img className="h-24 w-auto lg:h-auto" src={VerticalLine} />
+        </div>
+        <img className="hidden lg:block" src={VerticalLine} />
 
-          <div className="flex flex-col items-start gap-3 lg:gap-5">
-            <p className="font-bold text-xs text-white lg:text-base">
+        <div className="flex flex-col items-center gap-3 text-center lg:items-start lg:gap-5 lg:text-left">
+            <p className="font-bold text-xs text-white sm:text-sm lg:text-base">
               {" "}
               SOCIALIZE WITH HYDRA
             </p>
-            <nav className="flex gap-1.5 lg:gap-2">
+            <nav className="flex gap-2">
               <a
-                className="size-6 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-4 lg:[&_svg]:size-6"
+                className="size-7 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-5 lg:[&_svg]:size-6"
                 href="#"
               >
                 <RiFacebookFill />
               </a>
               <a
-                className="size-6 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-4 lg:[&_svg]:size-6"
+                className="size-7 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-5 lg:[&_svg]:size-6"
                 href="#"
               >
                 <RiLinkedinFill />
               </a>
               <a
-                className="size-6 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-4 lg:[&_svg]:size-6"
+                className="size-7 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-5 lg:[&_svg]:size-6"
                 href="#"
               >
                 <RiTwitterFill />
               </a>
               <a
-                className="size-6 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-4 lg:[&_svg]:size-6"
+                className="size-7 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-5 lg:[&_svg]:size-6"
                 href="#"
               >
                 <RiYoutubeFill />
               </a>
               <a
-                className="size-6 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-4 lg:[&_svg]:size-6"
+                className="size-7 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white lg:size-8 [&_svg]:size-5 lg:[&_svg]:size-6"
                 href="#"
               >
                 <RiInstagramFill />
               </a>
             </nav>
-            <Button className="whitespace-nowrap px-5 py-3 text-[10px] lg:px-7 lg:py-4 lg:text-xs" onClick={scrollToJoin} type="button" variant="primary">
+            <Button className="whitespace-nowrap" onClick={scrollToJoin} type="button" variant="primary" size="md">
               BUILD YOUR WORLD
             </Button>
           </div>
-        </div>
       </div>
       <hr className=" p-0.5 mt-19 bg-linear-to-r from-[#343045] via-[#8176AF] to-[#C0B7E8]" />
       <p className="font-bold text-white text-sm text-center capitalize mt-12">2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED </p>
