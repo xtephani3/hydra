@@ -8,66 +8,70 @@ import { Button } from "../ui/button";
 import VerticalLine from "../../assets/png/vertical-footer-line.png";
 
 export function Footer() {
+  const scrollToJoin = () => {
+    document.getElementById("join")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer>
-      <div className="flex justify-between items-center mt-40">
+      <div className="flex flex-col justify-between items-center gap-10 mt-20 text-center lg:mt-40 lg:flex-row lg:text-left">
         <div>
           <img src={HydraLogo} alt="hydra logo" />
         </div>
-        <img src={VerticalLine} />
+        <img className="hidden lg:block" src={VerticalLine} />
         <nav className="flex flex-col gap-2 text-base text-white font-bold">
-          <a href="#about">ABOUT</a>
-          <a href="#services">SERVICES</a>
-          <a href="#technologies">TECHNOLOGIES</a>
-          <a href="#how">HOW TO</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#about">ABOUT</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#services">SERVICES</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#technologies">TECHNOLOGIES</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#how">HOW TO</a>
         </nav>
-        <img src={VerticalLine} />
+        <img className="hidden lg:block" src={VerticalLine} />
         <nav className="flex flex-col gap-2 text-base text-white font-bold">
-          <a> FAQ</a>
-          <a> SITEMAPS</a>
-          <a> CONDITIONS</a>
-          <a> LICENCES</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#join">FAQ</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#about">SITEMAPS</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#join">CONDITIONS</a>
+          <a className="transition hover:text-[#C0B7E8]" href="#join">LICENCES</a>
         </nav>
-        <img src={VerticalLine} />
+        <img className="hidden lg:block" src={VerticalLine} />
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col items-center gap-5 lg:items-start">
           <p className="font-bold text-base text-white">
             {" "}
             SOCIALIZE WITH HYDRA
           </p>
           <nav className="flex gap-2 ">
             <a
-              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center"
+              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white"
               href="#"
             >
               <RiFacebookFill />
             </a>
             <a
-              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center"
+              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white"
               href="#"
             >
               <RiLinkedinFill />
             </a>
             <a
-              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center"
+              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white"
               href="#"
             >
               <RiTwitterFill />
             </a>
             <a
-              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center"
+              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white"
               href="#"
             >
               <RiYoutubeFill />
             </a>
             <a
-              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center"
+              className="size-8 rounded-full bg-[#C0B7E8] flex text-center justify-center items-center transition hover:-translate-y-1 hover:bg-white"
               href="#"
             >
               <RiInstagramFill />
             </a>
           </nav>
-          <Button variant="primary" size="md">
+          <Button onClick={scrollToJoin} type="button" variant="primary" size="md">
             BUILD YOUR WORLD
           </Button>
         </div>

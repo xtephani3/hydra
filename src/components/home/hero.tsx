@@ -5,6 +5,10 @@ import { CallToActions } from "./call-to-action";
 
 
 export function HeroSection() {
+  const scrollToJoin = () => {
+    document.getElementById("join")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
     <div className="w-full flex flex-col-reverse gap-10 mt-16 font-montserrat lg:mt-40 lg:flex-row lg:gap-0">
@@ -25,7 +29,7 @@ export function HeroSection() {
           </p>
         </div>
         <div className="group flex justify-center gap-3 items-center lg:justify-start">
-          <Button variant="primary" size="lg" className="uppercase">
+          <Button variant="primary" size="lg" className="uppercase" onClick={scrollToJoin} type="button">
             Build your world
           </Button>
           <RiArrowRightLongLine className="hidden transition group-hover:translate-x-1 sm:block" color="#C0B7E8" size={41} />

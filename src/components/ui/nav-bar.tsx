@@ -15,6 +15,10 @@ export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
+  const scrollToJoin = () => {
+    closeMenu();
+    document.getElementById("join")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header className="relative z-20 flex items-center justify-between font-montserrat">
@@ -30,8 +34,8 @@ export function NavBar() {
         ))}
       </nav>
       <div className="hidden items-center gap-9.5 lg:flex">
-        <Button variant="secondary"  size="sm">CONTACT US</Button>
-        <Button variant="primary" size="md">Join Hydra</Button>
+        <Button onClick={scrollToJoin} type="button" variant="secondary"  size="sm">CONTACT US</Button>
+        <Button onClick={scrollToJoin} type="button" variant="primary" size="md">Join Hydra</Button>
       </div>
       <button
         aria-expanded={isMenuOpen}
@@ -53,10 +57,10 @@ export function NavBar() {
             ))}
           </nav>
           <div className="mt-6 flex flex-col gap-3">
-            <Button className="w-full" size="sm" type="button" variant="secondary">
+            <Button className="w-full" onClick={scrollToJoin} size="sm" type="button" variant="secondary">
               CONTACT US
             </Button>
-            <Button className="w-full" size="md" type="button" variant="primary">
+            <Button className="w-full" onClick={scrollToJoin} size="md" type="button" variant="primary">
               JOIN HYDRA
             </Button>
           </div>

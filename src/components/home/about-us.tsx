@@ -3,6 +3,10 @@ import AboutMedia from "../../assets/png/about-media.png";
 import LongArrow from "../../assets/png/lengthy-arrow.png";
 
 export function AboutUs() {
+  const scrollToJoin = () => {
+    document.getElementById("join")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="mt-20 flex flex-col gap-14 font-montserrat lg:mt-40 lg:gap-24.25" id="about">
       <div className="flex w-full flex-col gap-8 lg:flex-row lg:gap-0">
@@ -47,7 +51,7 @@ export function AboutUs() {
             moving, choosing, testing, and repeating inside a polished virtual
             space.
           </p>
-          <Button variant="primary" size="lg" className="uppercase flex justify-center items-center">
+          <Button variant="primary" size="lg" className="uppercase flex justify-center items-center" onClick={scrollToJoin} type="button">
             Let's get in touch
           </Button>
         </div>
