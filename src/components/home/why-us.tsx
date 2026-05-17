@@ -10,25 +10,25 @@ const whyUsCardData = [
     icon: Simulation,
     title: "simulation",
     description:
-      "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.",
+      "Build lifelike training rooms where users can practice procedures, decisions, and safety steps before they happen in the real world.",
   },
   {
     icon: Education,
     title: "EDUCATION",
     description:
-      "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.",
+      "Turn lessons into memorable 3D experiences with guided discovery, visual context, and hands-on learning moments.",
   },
   {
     icon: SelfCare,
     title: "SELF-CARE",
     description:
-      "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.",
+      "Create calming wellness spaces for focus, reflection, recovery, and guided routines that users can revisit anytime.",
   },
   {
     icon: Outdoor,
     title: "OUTDOOR",
     description:
-      "Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.",
+      "Explore adventurous virtual environments that bring travel, sport, and team challenges into immersive digital spaces.",
   },
 ];
 
@@ -39,6 +39,10 @@ type WhyUsCardProps = {
 };
 
 const WhyUsCard = ({ icon, title, description }: WhyUsCardProps) => {
+  const scrollToJoin = () => {
+    document.getElementById("join")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="bg-[radial-gradient(circle_at_center,#433D60,#221F2F)] font-montserrat px-5 py-6 rounded-4xl flex flex-col justify-center items-center gap-8.5">
       <div className="rounded-full p-2.5 bg-[#221F2F]">
@@ -49,7 +53,7 @@ const WhyUsCard = ({ icon, title, description }: WhyUsCardProps) => {
           {title}
         </h2>
         <p className="text-xs text-white/50 font-montserrat"> {description}</p>
-        <Button variant="primary" size="sm">
+        <Button variant="primary" size="sm" onClick={scrollToJoin} type="button">
           TRY IT NOW
         </Button>
       </div>
@@ -59,32 +63,29 @@ const WhyUsCard = ({ icon, title, description }: WhyUsCardProps) => {
 
 export function WhyUs() {
   return (
-    <div className="flex flex-col gap-40 mt-27.75" id="services">
-      <div className="flex w-full ">
-        <div className="w-1/2 flex gap-2 flex-col">
-          <h3 className="text-4xl text-white uppercase font-montserrat font-bold">
+    <div className="flex flex-col gap-16 mt-20 lg:gap-40 lg:mt-27.75" id="services">
+      <div className="flex w-full flex-col gap-8 lg:flex-row lg:gap-0">
+        <div className="flex gap-2 flex-col text-center lg:w-1/2 lg:text-left">
+          <h3 className="text-3xl text-white uppercase font-montserrat font-bold sm:text-4xl">
             why build
           </h3>
-          <div className="flex gap-7.5 items-center">
-            <p className="text-4xl text-white uppercase font-montserrat  font-extralight">
+          <div className="flex justify-center gap-7.5 items-center lg:justify-start">
+            <p className="text-3xl text-white uppercase font-montserrat  font-extralight sm:text-4xl">
               with hydra
             </p>
-            <img src={LongArrow} />
+            <img className="hidden lg:block" src={LongArrow} />
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <p className="font-montserrat text-base text-white/60">
-            Vitae sapien pellentesque habitant morbi tristique senectus et netus
-            et. Feugiat
-            <br /> nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet
-            mauris commodo
-            <br /> quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit
-            amet tellus. Ornare <br /> lectus sit amet est placerat in. Lectus
-            magna fringilla urna porttitor rhoncus vitae.
+            Virtual reality gives your audience a place to participate instead
+            of only watching. Hydra builds focused environments for training,
+            education, wellness, and exploration, helping people understand
+            faster through movement, presence, and repeatable practice.
           </p>
         </div>
       </div>
-      <div className="flex gap-3">
+      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {whyUsCardData.map((step, index) => (
           <WhyUsCard
             key={index}

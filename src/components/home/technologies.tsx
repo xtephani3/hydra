@@ -6,21 +6,21 @@ import { RiArrowDownSLine } from "@remixicon/react";
 
 export function Technologies() {
   return (
-    <div className="flex flex-col gap-25 relative" id="technologies">
-      <div className="bg-[url('/technologies-media.png')] bg-cover bg-no-repeat font-montserrat mt-27.75 p-30 flex flex-col gap-2 rounded-full">
-        <h3 className="text-4xl font-bold text-center text-white uppercase">
+    <div className="flex flex-col gap-12 relative lg:gap-25" id="technologies">
+      <div className="bg-[url('/technologies-media.png')] bg-cover bg-center bg-no-repeat font-montserrat mt-20 px-6 py-20 flex flex-col gap-2 rounded-4xl lg:mt-27.75 lg:p-30 lg:rounded-full">
+        <h3 className="text-3xl font-bold text-center text-white uppercase sm:text-4xl">
           Technologies & hardware
         </h3>
-        <p className="text-4xl font-extralight text-center text-white uppercase">
+        <p className="text-3xl font-extralight text-center text-white uppercase sm:text-4xl">
           used by hydra vr
         </p>
-        <div className="bg-[#0e0e0e6d] w-22.5 h-22.5 rounded-full absolute flex justify-center items-center bottom-95 right-[50%]">
-        <div className="size-16.25 bg-linear-to-r from-[#8176AF] to-[#C0B7E8] flex rounded-full justify-center items-center">
-        <RiArrowDownSLine />
-        </div>
+        <div className="hidden bg-[#0e0e0e6d] w-22.5 h-22.5 rounded-full absolute justify-center items-center bottom-95 right-[50%] lg:flex">
+          <div className="size-16.25 bg-linear-to-r from-[#8176AF] to-[#C0B7E8] flex rounded-full justify-center items-center">
+            <RiArrowDownSLine />
+          </div>
         </div>
       </div>
-      <div className="flex items-center gap-22 justify-center">
+      <div className="grid grid-cols-2 items-center gap-8 justify-items-center lg:flex lg:gap-22 lg:justify-center">
         <img src={Unreal} alt={"unreal engine logo"} />
         <img src={Unity} alt={"unity techlogo"} />
         <img src={Oculus} alt={"oculus tech logo"} />
